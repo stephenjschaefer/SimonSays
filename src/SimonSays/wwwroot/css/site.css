@@ -17,18 +17,57 @@ textarea {
     max-width: 280px;
 }
 
-/* Carousel */
-.carousel-caption {
-    z-index: 10 !important;
+h2 {
+    text-align: center;
 }
 
-    .carousel-caption p {
-        font-size: 20px;
-        line-height: 1.4;
-    }
+#board {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+}
 
-@media (min-width: 768px) {
-    .carousel-caption {
-        z-index: 10 !important;
-    }
+#triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-right: 100px solid blue;
+	border-bottom: 50px solid transparent;
+    margin-top: 100px;
+}
+
+#triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid green;
+}
+
+#triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid yellow;
+    position: relative;
+    right: 100px;
+    top: 200px;
+}
+
+#triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 100px solid red;
+	border-bottom: 50px solid transparent;
+    position: relative;
+    right: 100px;
+    top: 100px;
+}
+
+#start-btn {
+    margin:0 auto;
+    display:block;
 }
