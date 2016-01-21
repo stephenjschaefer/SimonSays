@@ -71,3 +71,111 @@ h2 {
     margin:0 auto;
     display:block;
 }
+
+.flash-up{
+  -moz-animation: flash-up 1s ease-out;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation: flash-up 1s ease-out;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation: flash-up 1s ease-out;
+  -ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flash-up {
+    0% { background-color:none;}
+    50% { border-bottom: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-moz-keyframes flash-up {
+    0% { background-color:none;}
+    50% { border-bottom: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-ms-keyframes flash-up {
+    0% { background-color:none;}
+    50% { border-bottom: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+.flash-down{
+  -moz-animation: flash-down 1s ease-out;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation: flash-down 1s ease-out;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation: flash-down 1s ease-out;
+  -ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flash-down {
+    0% { background-color:none;}
+    50% { border-top: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-moz-keyframes flash-down {
+    0% { background-color:none;}
+    50% { border-top: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-ms-keyframes flash-down {
+    0% { background-color:none;}
+    50% { border-top: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+.flash-left{
+  -moz-animation: flash-left 1s ease-out;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation: flash-left 1s ease-out;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation: flash-left 1s ease-out;
+  -ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flash-left {
+    0% { background-color:none;}
+    50% { border-right: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-moz-keyframes flash-left {
+    0% { background-color:none;}
+    50% { border-right: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-ms-keyframes flash-left {
+    0% { background-color:none;}
+    50% { border-right: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+.flash-right{
+  -moz-animation: flash-right 1s ease-out;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation: flash-right 1s ease-out;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation: flash-right 1s ease-out;
+  -ms-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flash-right {
+    0% { background-color:none;}
+    50% { border-left: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-moz-keyframes flash-right {
+    0% { background-color:none;}
+    50% { border-left: 100px solid black;}        
+    100% {background-color:none;}
+}
+
+@-ms-keyframes flash-right {
+    0% { background-color:none;}
+    50% { border-left: 100px solid black;}        
+    100% {background-color:none;}
+}
