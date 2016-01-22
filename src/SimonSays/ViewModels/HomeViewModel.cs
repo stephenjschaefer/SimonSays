@@ -7,17 +7,17 @@ namespace SimonSays.ViewModels
 {
     public class HomeViewModel
     {
-        private Array moves = new int[4];
+        private Array moves = new int[20];
 
         public Array Moves
         {
             get
             {
                 int Min = 0;
-                int Max = 3;
+                int Max = 4;
                 Random randNum = new Random();
                 int[] moves = Enumerable
-                    .Repeat(0, 4)
+                    .Repeat(0, 20)
                     .Select(i => randNum.Next(Min, Max))
                     .ToArray();
                 return moves;

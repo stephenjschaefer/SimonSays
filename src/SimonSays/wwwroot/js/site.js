@@ -56,6 +56,49 @@ $(document).keydown(function (e) {
 });
 
 //Show Moves
-function showMoves(moves) {
-    alert("Moves: " + moves);
+function showMoves(moves, count) {
+    setMessage("Watch Carefully!");
+    var timeout = 2000;
+    setTimeout(function () {
+        for (var i = 0; i < count; i++) {
+            timeout = 2000 + (1500 * i + 1);
+            switch (moves[i]) {
+                case 0:
+                    setTimeout(function () {
+                        applyFlash(null, "up")
+                    }, timeout);
+                    break;
+                case 1:
+                    setTimeout(function () {
+                        applyFlash(null, "right")
+                    }, timeout);
+                    break;
+                case 2:
+                    setTimeout(function () {
+                        applyFlash(null, "down")
+                    }, timeout);
+                    break;
+                case 3:
+                    setTimeout(function () {
+                        applyFlash(null, "left")
+                    }, timeout);
+                    break;
+                default:
+                    break;
+            }
+        }
+        setTimeout(function () {
+            setMessage("Ok, Your Turn!");
+        }, timeout + 2000);
+    }, timeout);
+    
+    
+}
+
+function setMessage(message) {
+    $("#message").fadeTo(1000, 0);
+    setTimeout(function () {
+        $("#message").text(message);
+        $("#message").fadeTo(1000, 1);
+    }, 1500);
 }

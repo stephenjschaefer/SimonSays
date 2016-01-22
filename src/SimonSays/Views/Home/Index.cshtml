@@ -1,4 +1,5 @@
 ﻿<h2>Simon Says!</h2>
+<div id="message">&nbsp;</div>
 <br />
 <div id="board">
     <div id="triangle-left"></div>
@@ -16,5 +17,5 @@
 else
 {
     <button type="submit" id="start-btn" class="btn btn-disabled">Start Game</button>
-    <script type="text/javascript">showMoves(@ViewBag.Moves);</script>
+    <script type="text/javascript">showMoves(@ViewBag.Moves, @ViewBag.Count);</script>
 }
