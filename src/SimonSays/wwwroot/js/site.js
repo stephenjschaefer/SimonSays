@@ -2,7 +2,9 @@
 
 //Flash Triangle
 function applyFlash(e, direction) {
-    e.preventDefault();
+    if (e != null) {
+        e.preventDefault();
+    }
 
     $("#triangle-" + direction).addClass("flash-" + direction);
 
@@ -50,3 +52,8 @@ $(document).keydown(function (e) {
             break;
     }
 });
+
+//Show Moves
+function showMoves(moves) {
+    alert("Moves: " + moves);
+}

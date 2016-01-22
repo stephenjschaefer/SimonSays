@@ -1,8 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Simon Says";
-}
-
-<h2>Simon Says!</h2>
+﻿<h2>Simon Says!</h2>
 <br />
 <div id="board">
     <div id="triangle-left"></div>
@@ -11,5 +7,14 @@
     <div id="triangle-right"></div>
 </div>
 <br />
-<button type="button" id="start-btn" class="btn btn-primary">Start Game</button>
-
+@if (ViewData["Title"].ToString().CompareTo("Simon Says!")==0)
+{
+    <form asp-controller="Home" asp-action="Start" method="post">
+        <button type="submit" id="start-btn" class="btn btn-primary">Start Game</button>
+    </form>
+}
+else
+{
+    <button type="submit" id="start-btn" class="btn btn-disabled">Start Game</button>
+    <script type="text/javascript">showMoves(@ViewBag.Moves);</script>
+}
