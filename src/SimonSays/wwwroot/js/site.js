@@ -14,20 +14,22 @@ function applyFlash(e, direction) {
 }
 
 //Establish Triangle On Click Event Handlers
-$("#triangle-up").click(function (e) {
-    applyFlash(e, "up");
-});
+$(document).ready(function () {
+    $("#triangle-up").click(function (e) {
+        applyFlash(e, "up");
+    });
 
-$("#triangle-down").click(function (e) {
-    applyFlash(e, "down");
-});
+    $("#triangle-down").click(function (e) {
+        applyFlash(e, "down");
+    });
 
-$("#triangle-right").click(function (e) {
-    applyFlash(e, "right");
-});
+    $("#triangle-right").click(function (e) {
+        applyFlash(e, "right");
+    });
 
-$("#triangle-left").click(function (e) {
-    applyFlash(e, "left");
+    $("#triangle-left").click(function (e) {
+        applyFlash(e, "left");
+    });
 });
 
 //Establish Arrow Keypress Event Handlers
