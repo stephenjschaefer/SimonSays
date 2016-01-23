@@ -71,6 +71,7 @@ function checkMove(value) {
         }                    
         if (checkPattern()) {
             setMessage("That's Correct, Nice Job!");
+            $("#score").text(clickLimit);
             clickLimit++;
             setTimeout(function () {
                 showMoves(moveArray);
