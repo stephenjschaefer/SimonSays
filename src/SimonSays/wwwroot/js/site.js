@@ -97,7 +97,7 @@ function checkMove(value) {
             clickLimit++;
             setTimeout(function () {
                 showMoves(moveArray);
-            }, 2000);
+            }, 2750);
         }
     }
 }
@@ -190,7 +190,7 @@ function showMoves(moves) {
         setTimeout(function () {
             setMessage("Ok, Your Turn!");
             mode = "PLAYER";
-        }, timeout + 1000);
+        }, timeout);
     }, timeout);
     
     
@@ -198,9 +198,9 @@ function showMoves(moves) {
 
 //Set status message text
 function setMessage(message) {
-    $("#message").fadeTo(1000, 0);
+    $("#message").fadeTo(500, 0);
     setTimeout(function () {
         $("#message").text(message);
-        $("#message").fadeTo(1000, 1);
+        $("#message").fadeTo(500, 1);
     }, 1500);
 }
