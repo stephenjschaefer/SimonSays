@@ -4,6 +4,7 @@
 var moveArray;
 var clickCount = 0;
 var clickLimit = 1;
+var clickTotal = 20;
 var mode = "START";
 
 //Flash Triangle And Play Sound
@@ -43,7 +44,7 @@ function applyFlash(e, direction) {
 
 //Check If Game Was Won
 function checkWin() {
-    if (clickCount > 20) {
+    if (clickLimit > clickTotal) {
         return true;
     } else {
         return false;
@@ -80,25 +81,28 @@ function newGame() {
 //Check Player Move
 function checkMove(value) {
     if (isPlayerMode()) {
-        if (checkWin()) {
-            setMessage("Congradulations, You Win!");
-            newGame();
-        } else {
-            if (moveArray[clickCount] != value) {
-                setMessage("Sorry, You Lost!");
-                newGame();
-            } else {
-                clickCount++;
-            }
-        }                    
-        if (checkPattern()) {
-            setMessage("That's Correct, Nice Job!");
-            $("#score").text(clickLimit);
-            clickLimit++;
-            setTimeout(function () {
-                showMoves(moveArray);
-            }, 2750);
-        }
+       if (moveArray[clickCount] != value) {
+           setMessage("Sorry, You Lost!");
+           newGame();
+       } else {
+           clickCount++;
+       }                    
+       if (checkPattern()) {
+          setMessage("That's Correct, Nice Job!");
+          $("#score").text(clickLimit);
+          clickLimit++;
+          if (checkWin()) {
+              mode = "END";
+              setMessage("Congradulations, You Win!");
+              setTimeout(function () {
+                  newGame();
+              }, 10000);
+          } else {
+              setTimeout(function () {
+                  showMoves(moveArray);
+              }, 2750);
+          }
+       }
     }
 }
 
@@ -158,7 +162,7 @@ function showMoves(moves) {
     clickCount = 0;
     mode = "CPU";
     setMessage("Watch Carefully!");
-    var timeout = 1500;
+    var timeout = 1250 - (clickLimit * 100);
     setTimeout(function () {
         for (var i = 0; i < clickLimit; i++) {
             timeout = 1000 + (1500 * i + 1);
