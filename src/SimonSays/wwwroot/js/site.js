@@ -73,7 +73,7 @@ function checkMove(value) {
             setMessage("That's Correct, Nice Job!");
             clickLimit++;
             setTimeout(function () {
-                showMoves(moveArray, 0);
+                showMoves(moveArray);
             }, 2000);
         }
     }
@@ -130,7 +130,7 @@ $(document).keydown(function (e) {
 });
 
 //Show Moves
-function showMoves(moves, count) {
+function showMoves(moves) {
     moveArray = moves;
     clickCount = 0;
     mode = "CPU";
