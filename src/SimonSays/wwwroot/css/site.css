@@ -21,6 +21,11 @@ h2 {
     text-align: center;
 }
 
+#instructions {
+    width: 300px;
+    margin: auto;
+}
+
 #message {
     text-align: center;
     font-size: large;

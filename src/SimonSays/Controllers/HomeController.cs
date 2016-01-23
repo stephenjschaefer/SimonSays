@@ -24,5 +24,10 @@ namespace SimonSays.Controllers
             ViewData["Title"] = "Start";
             return View("Index");
         }
+
+        public IActionResult Instructions()
+        {
+            return View();
+        }
     }
 }
