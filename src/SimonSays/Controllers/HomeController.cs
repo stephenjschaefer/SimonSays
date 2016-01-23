@@ -21,7 +21,7 @@ namespace SimonSays.Controllers
         {
             HomeViewModel viewModel = new HomeViewModel();
             ViewBag.Moves = JsonConvert.SerializeObject(viewModel.Moves);
-            ViewBag.Count = 10;
+            ViewBag.Count = 4;
             ViewData["Title"] = "Start";
             return View("Index");
         }
