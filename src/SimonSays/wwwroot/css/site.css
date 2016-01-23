@@ -53,32 +53,12 @@ h2 {
     transform: translateY(-50%);
 }
 
-#triangle-left {
-	width: 0;
-	height: 0;
-	border-top: 50px solid transparent;
-	border-right: 100px solid blue;
-	border-bottom: 50px solid transparent;
-    margin-top: 100px;
-}
-
 #triangle-up {
 	width: 0;
 	height: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
 	border-bottom: 100px solid green;
-}
-
-#triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-top: 100px solid yellow;
-    position: relative;
-    right: 200px;
-    top: 200px;
 }
 
 #triangle-right {
@@ -90,6 +70,26 @@ h2 {
     position: relative;
     right: 200px;
     top: 100px;
+}
+
+#triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid blue;
+    position: relative;
+    right: 200px;
+    top: 200px;
+}
+
+#triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-right: 100px solid yellow;
+	border-bottom: 50px solid transparent;
+    margin-top: 100px;
 }
 
 #start-btn {
