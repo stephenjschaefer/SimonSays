@@ -135,7 +135,7 @@ function showMoves(moves) {
     clickCount = 0;
     mode = "CPU";
     setMessage("Watch Carefully!");
-    var timeout = 1000;
+    var timeout = 1500;
     setTimeout(function () {
         for (var i = 0; i < clickLimit; i++) {
             timeout = 1000 + (1500 * i + 1);
