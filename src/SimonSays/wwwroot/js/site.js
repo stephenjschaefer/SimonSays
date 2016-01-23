@@ -6,13 +6,35 @@ var clickCount = 0;
 var clickLimit = 1;
 var mode = "START";
 
-//Flash Triangle
+//Flash Triangle And Play Sound
 function applyFlash(e, direction) {
     if (e != null) {
         e.preventDefault();
     }
 
+    var sound;
+
+    switch (direction) {
+        case "up":
+            sound = $(".sound0")[0];
+            break;
+        case "right":
+            sound = $(".sound1")[0];
+            break;
+        case "down":
+            sound = $(".sound2")[0];
+            break;
+        case "left":
+            sound = $(".sound3")[0];
+            break;
+        default:
+            break;
+    }
+
     $("#triangle-" + direction).addClass("flash-" + direction);
+
+    sound.currentTime = 0;
+    sound.play();
 
     setTimeout(function () {
         $("#triangle-" + direction).removeClass("flash-" + direction);
